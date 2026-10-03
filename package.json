@@ -1,0 +1,25 @@
+{
+  "name": "ecommerce-facesentinel-client",
+  "version": "1.0.0",
+  "description": "E-commerce simulado - Sistema Cliente para integración SSO con FaceSentinel",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node server/index.js",
+    "build": "npm run --prefix client build",
+    "client": "npm run --prefix client dev",
+    "client:build": "npm run --prefix client build",
+    "dev:all": "node server/index.js & npm run --prefix client dev",
+    "deploy": "powershell -ExecutionPolicy Bypass -File ./deploy_remote.ps1"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "better-sqlite3": "^11.8.1",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "dotenv": "^16.4.7",
+    "cors": "^2.8.5",
+    "cookie-parser": "^1.4.7",
+    "uuid": "^11.1.0"
+  }
+}

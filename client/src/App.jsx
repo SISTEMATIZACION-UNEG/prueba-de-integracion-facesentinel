@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate, NavLink, Link } from 'react-router-dom';
 import { AuthProvider, useAuth } from './context/AuthContext';
+import unegLogoImg from './assets/uneg-logo.png';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Home from './pages/Home';
@@ -73,53 +74,28 @@ function PublicRoute({ children }) {
   return children;
 }
 
-// UNEG University Shield SVG Component
-export function UnegLogo({ size = 42 }) {
+// Official UNEG University Logo Component
+export function UnegLogo({ size = 42, className = '', alt = 'Universidad Nacional Experimental de Guayana' }) {
+  const pixelSize = typeof size === 'number' ? `${size}px` : size;
   return (
-    <svg width={size} height={size} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#0f2744" />
-          <stop offset="50%" stopColor="#173b6c" />
-          <stop offset="100%" stopColor="#2563eb" />
-        </linearGradient>
-        <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#f59e0b" />
-          <stop offset="100%" stopColor="#d97706" />
-        </linearGradient>
-      </defs>
-      {/* Escudo exterior */}
-      <path
-        d="M50 8 L86 22 V54 C86 74 70 88 50 94 C30 88 14 74 14 54 V22 Z"
-        fill="url(#shieldGrad)"
-        stroke="#ffffff"
-        strokeWidth="3.5"
-      />
-      {/* Borde interior dorado */}
-      <path
-        d="M50 15 L80 27 V52 C80 69 66 82 50 87 C34 82 20 69 20 52 V27 Z"
-        fill="none"
-        stroke="url(#goldGrad)"
-        strokeWidth="2.5"
-        strokeDasharray="4 2"
-      />
-      {/* Sol / Lucero de Guayana */}
-      <circle cx="50" cy="38" r="12" fill="url(#goldGrad)" />
-      <path
-        d="M50 20 V26 M50 50 V56 M32 38 H38 M62 38 H68 M37 25 L41 29 M59 47 L63 51 M37 51 L41 47 M59 29 L63 25"
-        stroke="#ffffff"
-        strokeWidth="2"
-        strokeLinecap="round"
-      />
-      {/* Libro / Ondas del río Caroní y Orinoco */}
-      <path
-        d="M32 64 C40 60 48 64 50 67 C52 64 60 60 68 64 V75 C60 71 52 75 50 78 C48 75 40 71 32 75 Z"
-        fill="#ffffff"
-        opacity="0.95"
-      />
-      {/* Indicador digital biométrico */}
-      <circle cx="50" cy="38" r="4" fill="#ffffff" />
-    </svg>
+    <img
+      src={unegLogoImg}
+      alt={alt}
+      width={typeof size === 'number' ? size : undefined}
+      height={typeof size === 'number' ? size : undefined}
+      className={`uneg-official-logo ${className}`.trim()}
+      style={{
+        width: pixelSize,
+        height: pixelSize,
+        minWidth: pixelSize,
+        minHeight: pixelSize,
+        objectFit: 'contain',
+        display: 'inline-block',
+        verticalAlign: 'middle',
+        borderRadius: '16%',
+        filter: 'drop-shadow(0 2px 8px rgba(0, 85, 212, 0.28))'
+      }}
+    />
   );
 }
 

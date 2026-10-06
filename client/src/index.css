@@ -4,31 +4,33 @@
    ========================================================================== */
 
 :root {
-  /* Paleta Principal UNEG */
-  --uneg-navy-deep: #0a192f;
-  --uneg-navy-dark: #0f2744;
-  --uneg-navy-primary: #173b6c;
-  --uneg-navy-light: #2563eb;       /* Azul marino claro / Royal Navy */
-  --uneg-navy-vibrant: #1d4ed8;
-  --uneg-navy-soft: #3b82f6;
-  --uneg-navy-subtle: #eff6ff;
-  --uneg-navy-tint: #dbeafe;
-  --uneg-navy-border: #bfdbfe;
+  /* Paleta Oficial UNEG (Azul Real Institucional, Azul Eléctrico y Blanco Puro) */
+  --uneg-navy-deep: #061938;        /* Azul medianoche base */
+  --uneg-navy-dark: #0a2756;        /* Azul institucional oscuro */
+  --uneg-navy-primary: #0043a8;     /* Azul oficial UNEG */
+  --uneg-navy-light: #0056e0;       /* Azul real brillante */
+  --uneg-navy-vibrant: #0066ff;     /* Azul eléctrico UNEG */
+  --uneg-navy-soft: #2575fc;        /* Azul resplandor */
+  --uneg-navy-subtle: #f0f6ff;      /* Fondo azul ultra claro */
+  --uneg-navy-tint: #dbeafe;        /* Acento azul pastel */
+  --uneg-navy-border: #bfdbfe;      /* Borde azul tenue */
 
   /* Blanco y Neutros */
   --uneg-white: #ffffff;
-  --uneg-bg-canvas: #f4f7fb;        /* Fondo claro institucional */
-  --uneg-bg-alt: #e9eef5;
+  --uneg-bg-canvas: #f4f8fc;        /* Fondo claro institucional */
+  --uneg-bg-alt: #e9f2fb;
   --uneg-card-bg: #ffffff;
 
   /* Tipografía y Escala de Grises */
-  --uneg-text-primary: #0f1e36;
-  --uneg-text-secondary: #334e68;
-  --uneg-text-muted: #627d98;
-  --uneg-border: #d2dce8;
-  --uneg-border-light: #e5edf5;
+  --uneg-text-primary: #071a38;
+  --uneg-text-secondary: #23436b;
+  --uneg-text-muted: #5e7a9e;
+  --uneg-border: #cadcf2;
+  --uneg-border-light: #e4edf8;
 
   /* Acentos Institucionales */
+  --uneg-accent-cyan: #00b4d8;
+  --uneg-accent-blue: #0077b6;
   --uneg-gold: #f59e0b;
   --uneg-gold-dark: #b45309;
   --uneg-gold-soft: #fef3c7;
